@@ -8,21 +8,21 @@ import { Controller } from 'react-hook-form'
 import { readableDate } from '../utils/format'
 
 const fields = [
-  ['agreement.number', 'Agreement number', ''], ['agreement.date', 'Agreement date', '', 'date'], ['agreement.estimatedTimeline', 'Estimated timeline (days)', '30', 'number'],
-  ['client.name', 'Client name', 'Aarav Mehta'], ['client.company', 'Company name', 'Northstar Studio'], ['client.contact', 'Contact person', 'Aarav Mehta'],
-  ['client.email', 'Client email', 'client@example.com'], ['client.phone', 'Phone number', '+91 98765 43210'], ['project.name', 'Project name', 'Website redesign'],
-  ['project.description', 'Project description', 'A conversion-led digital experience for your business.'], ['project.technology', 'Technology', 'React + Vite'], ['project.pages', 'Number of pages', '7', 'number'],
+  ['agreement.number', 'Agreement number', ''], ['agreement.date', 'Agreement date', '', 'date'], ['agreement.estimatedTimeline', 'Estimated timeline (days)', '', 'number'],
+  ['client.name', 'Client name', ''], ['client.company', 'Company name', ''], ['client.contact', 'Contact person', ''],
+  ['client.email', 'Client email', ''], ['client.phone', 'Phone number', ''], ['project.name', 'Project name', ''],
+  ['project.description', 'Project description', ''], ['project.technology', 'Technology', ''], ['project.pages', 'Number of pages', '', 'number'],
   ['project.price', 'Total price', ''], ['project.advance', 'Advance amount', ''],
   ['project.milestone', 'Second milestone', ''], ['project.final', 'Final payment', ''],
-  ['project.revisions', 'Revision rounds', '2', 'number'], ['project.warranty', 'Warranty duration', '30 days'], ['project.deliverables', 'Deliverables (one per line)', 'Strategy and sitemap\nResponsive UI design\nReact website development\nOn-page SEO foundation\nPerformance optimization\nProduction deployment'],
-  ['project.notes', 'Additional notes', 'The project begins after the signed agreement, advance payment, and complete content are received.'],
-  ['project.scope', 'Scope of services & technical architecture (one item per line)', 'Core Technology Framework: React + Vite\nPage Count & Structure: Up to 7 pages total\nResponsive Design: Mobile, tablet, and desktop adaptation\nPerformance Optimization: Clean code, image optimization, and caching setup\nTechnical Audit & Bug Fixes: Broken links, form errors, missing images, and placeholder text\nBasic On-Page SEO Setup: URLs, titles, meta descriptions, and image alt tags\nProduction Deployment: Final deployment to the client domain and hosting'],
-  ['project.clientResponsibilities', 'Client responsibilities & content delivery (one item per line)', 'Asset Provision: Final copy, logos, brand guidelines, and media files\nCredentials & Access: Domain, hosting, CMS, and third-party credentials\nSchedule Dependencies: Delayed content or feedback extends the timeline proportionally'],
-  ['project.designApproval', 'Design approval & change order policy (one item per line)', 'Mockup Review: Agency presents a design mockup or staging build for approval\nStandard Revisions: Up to 2 rounds of minor layout, colour, and typography adjustments\nOut-of-Scope Alterations: Structural redesigns, additional pages, and new functionality are quoted separately'],
-  ['project.timelineExclusions', 'Project timeline & exclusions (one item per line)', 'Standard Timeline: 30 business days from complete assets and advance payment\nExcluded: Domain registration and annual hosting renewals\nExcluded: Original copywriting or blog article writing\nExcluded: Logo design or complete brand identity creation\nExcluded: Paid advertising, social media posting, or link-building campaigns'],
-  ['project.warrantyOwnership', 'Post-launch warranty & asset ownership (one item per line)', 'Complimentary Support Window: 30 days after deployment for development bugs\nFull Client Ownership: Custom source code, graphic assets, and design files transfer after full payment\nAccount Credentials: Domain, hosting, and third-party tools remain in the client’s name\nPortfolio Rights: AnchorWorks may display the completed work in its portfolio'],
-  ['project.termination', 'Termination & refund terms (one item per line)', 'Advance Deposit Policy: The advance is non-refundable once strategy or development begins\nEarly Termination: Either party may terminate in writing; completed work and accrued milestones remain payable'],
-  ['project.remittance', 'Remittance details', 'Account Name: Anchor Works\nAccount No: [Add account number]\nIFSC Code: [Add IFSC code]\nBank & Branch: [Add bank and branch]\nUPI ID: [Add UPI ID]\nPayment reference: Mention the business name in the remittance reference.']
+  ['project.revisions', 'Revision rounds', '', 'number'], ['project.warranty', 'Warranty duration', ''], ['project.deliverables', 'Deliverables (one per line)', ''],
+  ['project.notes', 'Additional notes', ''],
+  ['project.scope', 'Scope of services & technical architecture (one item per line)', ''],
+  ['project.clientResponsibilities', 'Client responsibilities & content delivery (one item per line)', ''],
+  ['project.designApproval', 'Design approval & change order policy (one item per line)', ''],
+  ['project.timelineExclusions', 'Project timeline & exclusions (one item per line)', ''],
+  ['project.warrantyOwnership', 'Post-launch warranty & asset ownership (one item per line)', ''],
+  ['project.termination', 'Termination & refund terms (one item per line)', ''],
+  ['project.remittance', 'Remittance details', '']
 ]
 
 function initialValues() {
