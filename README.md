@@ -13,11 +13,11 @@ npm run dev
 
 Open the root URL after starting the app. The **Agreement Builder** is the agency workspace. Enter the client and project details, then select **Generate client link**. Copy that URL and send it to the client. The URL contains the agreement configuration, so the client can open it without a backend or database.
 
-The client link opens the branded agreement view. The client reviews the scope and terms, signs in the browser, accepts the agreement, and submits. A PDF is generated locally, uploaded to Cloudinary, and its secure link is sent through EmailJS when configured. The client can still download the locally generated PDF.
+The client link opens the branded agreement view. The client reviews the scope and terms, signs in the browser, accepts the agreement, and submits. Agreement data is compressed into the URL to keep links shorter while preserving the frontend-only workflow. A PDF is generated locally, uploaded to Cloudinary, and its secure link is sent through EmailJS when configured. The client can still download the locally generated PDF.
 
 Long agreement fields use the built-in rich-text editor. Select text or place the cursor in a content field and use the toolbar for bold, italic, underline, bulleted lists, and numbered lists. The formatting is preserved in the client agreement and carried into the generated PDF as readable text.
 
-Because this is frontend-only, the generated link is not a secret and there is no server-side storage or revocation. Use a real deployment URL (not `localhost`) when sending links to clients.
+Because this is frontend-only, the generated link is not a secret and there is no server-side storage or revocation. New links use compressed URL data; older links remain readable for compatibility. Use a real deployment URL (not `localhost`) when sending links to clients.
 
 ## Configure defaults
 
